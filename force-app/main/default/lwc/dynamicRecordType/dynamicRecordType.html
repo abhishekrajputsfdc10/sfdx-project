@@ -1,0 +1,25 @@
+<template>
+    <lightning-card>
+        <center>            
+                <span><strong>Select a record type</strong></span>
+            <br/>
+                <select class="slds-select" style="width:50%;" onchange={handleChange}>
+                    <template for:each={options} for:item="option">
+                        <option key={option.value}  value={option.value}>{option.label}</option>
+                    </template>
+                </select>
+            <br/>
+            <br/>            
+             <button class="slds-button slds-button_brand" value="Cancel" onclick={Canvel}>
+                Cancel
+                </button> &nbsp; &nbsp;
+                <button class="slds-button slds-button_brand" value="Next" onclick={createOperationRequest}>
+                Next
+                </button>
+               
+            
+        </center>
+        
+    </lightning-card>
+        
+</template>

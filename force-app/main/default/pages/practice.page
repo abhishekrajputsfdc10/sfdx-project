@@ -1,0 +1,9 @@
+<apex:page StandardController="Account">
+
+     <apex:tabPanel switchType="client">
+   
+    <apex:tab label="Overview" name="Overview">
+      <apex:detail relatedList="false" /> 
+    </apex:tab>
+    </apex:tabPanel>
+    </apex:page>

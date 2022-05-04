@@ -1,0 +1,32 @@
+<template>
+    <!--lightning-button label="Add" onclick={handleclick}></lightning-button>
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}>
+        </lightning-datatable>
+    </div -->
+   
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item padding="around-large" medium-device-size size="8">
+            <lightning-record-edit-form object-api-name="Sub_Group__c">
+                <lightning-input-field field-name="Account__c" value={recordId} onchange={handleaccount}></lightning-input-field>
+                
+                <!--<lightning-input-field field-name="Name" value={seachlocation} onchange={searchlocationhandler}>
+                </lightning-input-field>
+                <div>
+                    <template for:each={records} for:item="acc">
+                                <a key={acc.title} onclick={selectedvalue} data-id={acc.title}>{acc.title}</a>
+                                
+                    </template> 
+                </div>
+                <lightning-button type="submit" label="Submit" onclick={closeQuickAction}></lightning-button> -->
+            </lightning-record-edit-form>
+            <lightning-input label='Sub Group Name' value={seachlocation} onchange={searchlocationhandler}></lightning-input>
+            <lightning-button label="Save" onclick={createAccount}></lightning-button>
+           
+        </lightning-layout-item>
+    </lightning-layout>
+    
+</template>

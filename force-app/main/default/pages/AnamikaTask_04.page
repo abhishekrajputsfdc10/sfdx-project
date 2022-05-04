@@ -1,0 +1,26 @@
+<apex:page controller="Active">
+<style>
+.errorClass {
+    background-color: red;
+}
+.normalClass {
+    background-color: blue;
+}
+.normalClass1 {
+    background-color: pink;
+}
+.normalClass2 {
+    background-color: White;
+}
+</style>
+    <apex:form >
+       <apex:pageBlock id="id" title="AccountDetails" >
+           <apex:pageblockTable value="{!po}" var="a">
+            <apex:column value="{!a.Name}" styleClass="{!IF(a.Show__c == 'Hot','errorClass',IF(a.Show__c == 'warm','normalClass',IF(a.Show__c == 'cold','normalClass2','normalClass1')))}"/>/>
+             <apex:column value="{!a.Show__c}"/>
+             </apex:pageblockTable>
+       
+       </apex:pageBlock>
+
+</apex:form>
+</apex:page>

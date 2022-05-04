@@ -1,0 +1,56 @@
+<apex:page standardController="Contact">
+   <apex:sectionHeader title="Contact Edit" subtitle="Contact" />
+       <apex:form >
+              
+             
+           <apex:pageBlock title="Personal Information">       
+           
+            
+               <apex:pageBlockSection columns="3">
+                     <apex:outputField value="{!Contact.FirstName}"/>
+                      <apex:inputField value="{!Contact.Accountid}"/>
+                      <apex:inputField value="{!Contact.Department}"/>
+                      <apex:inputField value="{!Contact.LastName}"/>
+                      <apex:inputField value="{!Contact.Email}"/>
+                      <apex:inputField value="{!Contact.Birthdate}"/>
+                  </apex:pageBlockSection> 
+                  
+                      <apex:pageBlockButtons location="top">
+                      <apex:commandButton action="{!Edit}" value="Edit"/>
+                      
+                   </apex:pageBlockButtons> 
+            </apex:pageBlock>         
+           
+            <apex:pageBlock title="Contact Information">           
+                <apex:pageBlockSection columns="2">
+                     <apex:inputField value="{!Contact.Phone}"/>
+                     <apex:inputField value="{!Contact.fax}"/>
+                      <apex:inputField value="{!Contact.HomePhone}"/>
+                      <apex:inputField value="{!Contact.MobilePhone}"/>
+                  </apex:pageBlockSection>            
+            </apex:pageBlock>         
+           
+           <apex:pageBlock title="Contact Information">           
+               <apex:pageBlockSection columns="2">
+                     <apex:inputField value="{!Contact.Ownerid}"/>
+                     <apex:inputField value="{!Contact.CreatedByid}"/>
+                      <apex:inputField value="{!Contact.Name}"/>
+                      <apex:inputField value="{!Contact.LastModifiedByid}"/>
+                  </apex:pageBlockSection>    
+                  
+                  <apex:pageBlockButtons location="bottom" >
+                      <apex:commandButton action="{!save}" value="Save"/>
+                      
+                   </apex:pageBlockButtons>        
+            
+            <apex:pageBlockButtons location="top">
+                      <apex:commandButton action="{!Edit}" value="Edit"/>
+                      
+                   </apex:pageBlockButtons>        
+            
+            
+           </apex:pageBlock>         
+           
+           
+       </apex:form>
+ </apex:page>

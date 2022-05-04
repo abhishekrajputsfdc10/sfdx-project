@@ -1,0 +1,11 @@
+<apex:component controller="ArticleFeedbackController">
+<!--<apex:attribute type="string" required="true" description="Email Subject" name="mail_subject" assignto="{!subject}"/> -->
+
+ <apex:form >
+     <b><apex:messages /></b>
+             <apex:outputLabel value="Body" for="Body"/>:<br />     
+            <apex:inputTextarea value="{!body}" id="Body"  rows="10" cols="80"/>           
+            <br /><br /><br />
+            <apex:commandButton value="Send Email" action="{!send}" /> 
+        </apex:form>
+</apex:component>

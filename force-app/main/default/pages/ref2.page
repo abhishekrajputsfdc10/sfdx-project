@@ -1,0 +1,11 @@
+<apex:page controller="ref2">
+<apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:outputField value="{!a.name}"/>
+            <apex:inputField value="{!a.phone}"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+        <apex:commandButton value="Update" action="{!acton}"/>
+</apex:form>
+</apex:page>

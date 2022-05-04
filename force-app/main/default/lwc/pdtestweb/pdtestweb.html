@@ -1,0 +1,14 @@
+<template>
+    <lightning-card>
+        <lightning-layout>
+           <lightning-input label="Enter Value" value={entervalue} onchange={handlechange}></lightning-input>
+           <lightning-button label="Click Me" onclick={clickMethod}></lightning-button>
+            <template for:each={accountdata} for:item="acc">
+                  <div key={acc.Id}>
+                      <p> {acc.Name}</p>
+                  </div>
+            </template>
+           {entervalue}
+        </lightning-layout>    
+    </lightning-card>
+</template>

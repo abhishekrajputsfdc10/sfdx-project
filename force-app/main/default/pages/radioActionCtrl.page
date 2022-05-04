@@ -1,0 +1,12 @@
+<apex:page standardController="contact" extensions="radioActionCtrl"  >
+    <apex:form >
+        <apex:selectRadio >
+            <apex:actionSupport event="onchange" action="{!changeInputState}" rerender="opPanelName"/>
+            <apex:selectOption itemValue="" itemlabel="Option1"/>
+        </apex:selectRadio>       
+        <apex:outputPanel id="opPanelName">
+            <apex:inputField value="{!contact.firstName}" id="NameInput" required="false"/>
+            
+        </apex:outputPanel>            
+    </apex:form>
+</apex:page>

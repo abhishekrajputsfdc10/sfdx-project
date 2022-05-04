@@ -1,0 +1,11 @@
+<apex:page >
+   <apex:outputLabel > Line One </apex:outputLabel>
+    <Script>
+        function show() {
+           alert('This is a test');                 
+        }
+    </Script>
+   <apex:form >
+        <apex:inputtext onchange="show()"/>
+   </apex:form>
+</apex:page>

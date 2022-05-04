@@ -1,0 +1,50 @@
+<apex:page controller="Sample1">
+
+<script type = "text/javascript">
+
+  function validate() {
+  if(document.getElementById('{!$Component.frm.pb.pbs.pbsi1.nam}').value =='')
+  {
+  
+  alert("Account Name is mandotry");
+  }
+   if(document.getElementById('{!$Component.frm.pb.pbs.pbsi2.phone}').value =='')
+  {
+  
+  alert("Phone Number is mandotry");
+  }
+  
+  else {
+  alert("Account has been created");
+  callsubmt();
+  
+  
+  
+  
+  }
+  
+  }
+  </script>
+
+
+<apex:form id="frm">
+  <apex:actionFunction action="{!submt}" name="callsubmt" reRender="pb"/>
+     <apex:pageBlock id="pb">
+       <apex:pageBlockSection id="pbs">
+        <apex:pageBlockSectionItem > <apex:outputLabel value="Account Name"/>  </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem id="pbsi1"> <apex:inputtext value="{!nam}" id="nam"/>  </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem > <apex:outputLabel value="Phone Number"/>  </apex:pageBlockSectionItem>
+         <apex:pageBlockSectionItem id="pbsi2"> <apex:inputtext value="{!phone1}" id="phone"/>  </apex:pageBlockSectionItem>      
+        
+      
+       </apex:pageBlockSection>
+       
+       <apex:pageBlockButtons >
+         <apex:commandButton value="Insert" onclick="validate();" />
+       
+       </apex:pageBlockButtons>
+     </apex:pageBlock>
+ 
+ </apex:form>
+
+</apex:page>

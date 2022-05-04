@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="List Of Object">
+        <lightning-layout>
+            <lightning-layout-item padding="around-large" size="10">    
+
+                        <lightning-combobox
+                        name="progress"
+                        value={selectedvalue}
+                        placeholder="Select Progress"
+                        options={options}
+                        onchange={handleChange}></lightning-combobox>
+                        <p>Selected value is: {selectedvalue}</p>
+                        <c-displayallthe-fields selectedobjecttofetchfield={selectedvalue}></c-displayallthe-fields>
+                       
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    
+</template>

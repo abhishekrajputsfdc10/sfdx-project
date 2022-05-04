@@ -1,0 +1,7 @@
+<apex:page controller="pg1" >
+  <apex:form >
+    <apex:inputtext value="{!pr}"/>
+    <apex:commandButton value="updtae" action="{!upd}"/>
+  
+  </apex:form>   
+</apex:page>

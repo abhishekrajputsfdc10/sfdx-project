@@ -1,0 +1,6 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations This is new page</h1>
+  This is your new Page: testing2 <p/>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

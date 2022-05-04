@@ -1,0 +1,13 @@
+<apex:page controller="contactsearch5" >
+<apex:form >
+<apex:pageBlock id="pbss">
+        <apex:pageBlockTable value="{!SearchAction}" var="c"  id="pbt" >
+               <apex:column value="{!c.name}" headerValue="Name"/>
+               <apex:column value="{!c.LeadSource }" headerValue="Lead Source"/>  
+        </apex:pageBlockTable>
+<apex:commandButton action="{!SearchAction}" value="search" title="Search" reRender="pbss" />    
+        </apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

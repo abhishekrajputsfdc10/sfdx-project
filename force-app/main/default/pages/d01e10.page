@@ -1,0 +1,5 @@
+<apex:page standardController="Account">
+    <apex:pageBlock rendered="{!Account.Contacts != ''}">
+
+           </apex:pageBlock>
+</apex:page>

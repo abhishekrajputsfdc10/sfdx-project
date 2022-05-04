@@ -1,0 +1,67 @@
+<!-- allows you to change the status of your cases -->
+<apex:page >
+<form id="j_id0:changeStatusForm" name="j_id0:changeStatusForm" method="post"
+    action="/apex/sandbox" enctype="application/x-www-form-urlencoded">
+    <!-- opening div tags -->
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="pbTitle"> </td>
+            <td id="j_id0:changeStatusForm:j_id1:j_id29" class="pbButton">
+                <input type="submit"
+                    name="j_id0:changeStatusForm:j_id1:j_id29:j_id30"
+                    value="Save" class="btn"/>
+            </td>
+        </tr>
+    </table>
+    
+    <div class="pbBody">
+        <table class="list" border="0" cellpadding="0" cellspacing="0">
+            <colgroup span="5"/>
+            <thead>
+                <tr class="headerRow ">
+                    <th class="headerRow  " scope="col">Case Number</th>
+                    <th class="headerRow " scope="col">Account Name</th>
+                    <th class="headerRow  " scope="col">Name</th>
+                    <th class="headerRow  " scope="col">Subject</th>
+                    <th class="headerRow  " scope="col">Status</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr class="dataRow even  first ">
+                    <td class="dataCell"><span>00001000</span></td>
+                    <td class="dataCell"><span>Edge Communications</span></td>
+                    <td class="dataCell"><span>Rose Gonzalez</span></td>
+                    <td class="dataCell"><span>Starting generator after electrical failure</span></td>
+                    <td class="dataCell">
+                        <select>
+                            <option value="">--None--</option>
+                            <option value="New">New</option>
+                            <option value="Working" selected="selected">Working</option>
+                            <option value="Escalated">Escalated</option>
+                            <option value="Closed">Closed</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <tr class="dataRow odd last ">
+                    <td class="dataCell"><span>00001027</span></td>
+                    <td class="dataCell"><span>Joyce Bookings</span></td>
+                    <td class="dataCell"><span>Andy Young</span></td>
+                    <td class="dataCell"><span>Checking paper jam</span></td>
+                    <td class="dataCell">
+                        <select>
+                            <option value="">--None--</option>
+                            <option value="New">New</option>
+                            <option value="Working" selected="selected">Working</option>
+                            <option value="Escalated">Escalated</option>
+                            <option value="Closed">Closed</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- closing div tags -->
+</form>
+</apex:page>

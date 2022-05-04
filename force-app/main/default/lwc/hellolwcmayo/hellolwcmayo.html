@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <lightning-layout>
+           <template for:each={testdata} for:item="Acc">
+                <p key={Acc.Id}>{Acc.Name}</p>
+           </template>
+           
+            <!--lightning-layout-item>
+                <lightning-input label="Test Input" onchange={handlechange} value={inputRead}></lightning-input> 
+                <lightning-button label="Click Me" onclick={clickmefunc}></lightning-button>
+                <lightning-formatted-text value={textvalue}></lightning-formatted-text>       
+            </lightning-layout-item-->
+        </lightning-layout>
+    </lightning-card>
+</template>

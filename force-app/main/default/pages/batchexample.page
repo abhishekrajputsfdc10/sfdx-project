@@ -1,0 +1,8 @@
+<apex:page controller="Testbatch">
+ <Apex:form >
+   <Apex:outputLabel > Enter Name </Apex:outputLabel>
+   <Apex:inputtext value="{!myname}"/>
+   <apex:commandButton value="Click" action="{!show}"/>
+   </apex:form>
+ 
+</apex:page>

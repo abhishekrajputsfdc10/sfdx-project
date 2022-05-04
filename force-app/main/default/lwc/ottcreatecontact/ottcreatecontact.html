@@ -1,0 +1,63 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item padding="around-medium" small-device-size size="8">
+          <lightning-card title="Create OTT Contact" icon-name="standard:contact_list">
+        <!--lightning-record-edit-form object-api-name="OTT_Contact__c" density="compact">
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name="Account__c" value={recordid}></lightning-input-field>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="slds-form-element__label" for="input-395">Contact</label>
+                    <c-custom-Look-Up onlookupselected={handleevent} recordid={recordid}></c-custom-Look-Up> 
+                </div>
+                <div class="slds-col slds-size_1-of-2">                   
+                    <c-custom-Look-Up onlookupselected={handleevent} recordid={recordid}></c-custom-Look-Up>          
+                </div>
+            </div>
+                  <lightning-button type="submit" label="Submit" ></lightning-button>
+        </lightning-record-edit-form-->
+
+        <lightning-record-edit-form object-api-name="OTT_Contact__c">
+          <div> 
+             <lightning-input-field field-name="Account__c" value={recordid}></lightning-input-field>
+           </div>
+             <div><label class="slds-form-element__label" for="input-395">Contact</label>
+            <c-custom-Look-Up onlookupselected={handleevent} recordid={recordid}></c-custom-Look-Up>
+            </div>
+            <br>
+            <lightning-button label="Submit" onclick={createOTTContact}></lightning-button>
+        </lightning-record-edit-form>
+
+
+        <!--div class="slds-form_horizontal slds-form slds-grid slds-wrap">
+            <lightning-input  type="text" label ="Account" class="slds-size_1-of-2"></lightning-input>
+            <label class="slds-size_1-of-2">Contact</label>
+            <c-custom-Look-Up onlookupselected={handleevent} recordid={recordid}></c-custom-Look-Up>    
+        </div-->
+        <!--div class="slds-form" role="list">
+            <div class="slds-form__row">
+              <div class="slds-form__item" role="listitem">
+                <div class="slds-form-element slds-form-element_horizontal slds-is-editing">
+                  <label class="slds-form-element__label" for="single-form-element-id-02">Label</label>
+                  <div class="slds-form-element__control">
+                    <input type="text" id="single-form-element-id-02" placeholder="Placeholder Text" class="slds-input" value={recordid}/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slds-form__item" role="listitem">
+                <div class="slds-form-element slds-form-element_horizontal slds-is-editing">
+                  <label class="slds-form-element__label" for="single-form-element-id-03">Label</label>
+                  <div class="slds-form-element__control">
+                    <c-custom-Look-Up onlookupselected={handleevent} recordid={recordid}></c-custom-Look-Up> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div-->
+        </lightning-card>
+    </lightning-layout-item>
+    </lightning-layout>     
+   
+</template>

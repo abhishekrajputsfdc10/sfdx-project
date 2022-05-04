@@ -1,0 +1,7 @@
+<apex:page standardController="Account">
+  
+  <p>{!if(Account.Country__c == 'USS', "True", "False")}</p>
+  
+    <p>{!if(Contains(Account.Country__c,'USS'), 'True', 'False')}</p>
+  
+</apex:page>

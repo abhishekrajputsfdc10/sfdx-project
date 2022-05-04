@@ -1,0 +1,17 @@
+<apex:page controller="ControllerClassName" action="{!autoRun}">
+
+   <apex:form >
+
+      <apex:pageblock >
+
+           <apex:pageblockTable value="{!strList}" var="obj">
+
+              <apex:column value="{!obj}"/>
+
+           </apex:pageblockTable>
+
+      </apex:pageblock>
+
+   </apex:form>
+
+</apex:page>

@@ -1,0 +1,22 @@
+<apex:page standardController="Account" extensions="accountDetailScreenController" tabStyle="Solution">
+ <apex:form >
+  <apex:pageBlock >
+    <apex:pageBlockSection title="Account Details Using Standard Controller">
+       <apex:outputField value="{!account.name}"/>
+       <apex:outputField value="{!account.Type}"/>
+       <apex:outputField value="{!account.Annualrevenue}"/>
+       <apex:outputField value="{!account.AccountNumber}"/>
+       <apex:commandButton value="Show Contacts" action="{!fetchContacts}" style="align:left" />
+    </apex:pageBlockSection> 
+    <apex:pageblockSection title="Contacts fetched using Extenssion class" rendered="{!showCOntactFlag }" id="displaycontacts">
+    </apex:pageblockSection>
+      <apex:pageBlockTable value="{!conList}" var="conRec">
+        <apex:column value="{!conRec.name}"/>   
+        <apex:column value="{!conRec.email}"/>
+        <apex:column value="{!conRec.leadsource}"/>
+        <apex:column value="{!conRec.Department}"/>
+        <apex:column value="{!conRec.Description }"/>
+      </apex:pageBlockTable>    
+  </apex:pageBlock>
+ </apex:form> 
+</apex:page>

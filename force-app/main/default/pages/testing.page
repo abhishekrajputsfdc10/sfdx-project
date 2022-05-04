@@ -1,0 +1,23 @@
+<apex:page standardController="contact" >
+  <apex:sectionHeader title="Contact Edit" subtitle="New SFDC99 Member" />
+  <apex:image value="http://www.ootb-c.com/wp-content/uploads/2014/02/icon_salesforce1.png"  styleClass="logo" />
+
+     <apex:form >
+          <apex:pageBlock title="Edit Contact">
+              <apex:pageBlockSection columns="2">
+                     <apex:inputField value="{!Contact.FirstName}"/>
+                      <apex:inputField value="{!Contact.LastName}"/>
+                      <apex:inputField value="{!Contact.Email}"/>
+                      <apex:inputField value="{!Contact.Birthdate}"/>
+                  </apex:pageBlockSection>
+                  
+                  <apex:pageBlockButtons >
+                      <apex:commandButton action="{!save}" value="Save"/>
+                      
+                   </apex:pageBlockButtons>
+                
+          </apex:pageBlock>
+      </apex:form>
+      
+      
+ </apex:page>

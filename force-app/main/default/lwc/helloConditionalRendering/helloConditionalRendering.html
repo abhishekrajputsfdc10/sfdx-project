@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title = "HelloConditionalRendering" icon-name = "custom:custom14">
+        <div class="slds-m-around_medium">
+            <lightning-input
+                type = "checkbox"
+                label = "show details"
+                onchange={handleChange} >
+            </lightning-input>
+            
+            <div class="slds-m-vertical_medium">
+                <template if:true = {areDetailsVisible}>
+                    There are the details!
+                </template>
+                <template if:false = {areDetailsVisible}>
+                    No Showing details!
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

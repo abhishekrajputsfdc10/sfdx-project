@@ -1,0 +1,15 @@
+<apex:page standardcontroller="Account"> 
+
+   <Apex:sectionHeader title="Account deatil {!$User.FirstName}"/>
+   
+    
+      <Apex:pageblock title="Account Name">
+      
+      you are viewing the {!account.name} account.
+      
+    
+        
+         </apex:pageblock>
+         
+
+</apex:page>

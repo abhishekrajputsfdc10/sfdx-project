@@ -1,0 +1,12 @@
+<apex:page standardController="Account">
+    <apex:sectionHeader title="Account detail"/>
+         <apex:form >
+              
+           <apex:pageBlock title="Personal Information">           
+               <apex:pageBlockSection columns="3">
+                      <apex:outputField value="{!Account.Name}"/>
+                      <apex:outputField value="{!Account.Ownerid}"/>
+                </apex:pageBlockSection> 
+            </apex:pageBlock>
+          </apex:form>
+</apex:page>

@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Seacrh for location">
+        <lightning-layout>
+            <lightning-layout-item padding="around-small" size="6">
+                <lightning-input label="Search Location" value={seachlocation} onchange={searchlocationhandler} type="search"></lightning-input>
+                <template for:each={records} for:item="acc">
+                    <a key={acc.title} onclick={selectedvalue} data-id={acc.title}>{acc.title}</a>
+                    <!--<div key={acc.Id} onclick={selectedvalue}>
+                        <a><href>{acc.title}</href></a>
+                        <a {acc.Id} onclick={getIdVal} data-id="esdsdfsdsdg">Test</a> 
+                    </div> -->
+             </template>  
+                <lightning-button label="Seach Location" onclick={handleclick}></lightning-button>
+            </lightning-layout-item>
+
+            <lightning-layout-item size="6" padding="around-small">
+                <div class="header-column">
+                    <lightning-input label="Location Selected" value={title} readonly onchange={handleLocationChange}></lightning-input></br>
+                    <lightning-input label="Restaurant Name" value={restaurant} onchange={handleRestaurantChange}></lightning-input></br>
+                    <lightning-button label="Search Restaurants" onclick={searchRestaurant}></lightning-button>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

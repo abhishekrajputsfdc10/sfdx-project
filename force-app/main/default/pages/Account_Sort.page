@@ -1,0 +1,44 @@
+<apex:page controller="Account_Sort">
+
+ <script>
+     //javascript function to take only numeric values 
+     function checkvalue(e){
+         
+          var a = e.charCode;
+             return (a >= 48 && a <= 57);
+
+     }
+     
+     
+ </script>
+ <apex:form >
+    <apex:pageBlock id="accountRecords">
+      <apex:pageblockButtons >
+         <apex:commandButton value="Sort" action="{!sortAccount}" rerender="accountRecords" />
+      </apex:pageblockButtons>
+
+    
+        <apex:pageBlockSection >
+            
+            <apex:pageBlockTable value="{!wrapList}" var="wrap">
+                <apex:column headerValue="Account Name" >
+                
+                 <apex:outputfield value="{!wrap.ac.Name}" />
+                 </apex:column>
+                <apex:column headerValue="Sort value" >
+                
+                <apex:inputText value="{!wrap.num}" onkeyPress="return checkvalue(event);"/>
+                </apex:column>
+            </apex:pageBlockTable>
+            
+            
+        </apex:pageBlockSection>
+        
+        
+    </apex:pageBlock>
+ </apex:form>
+
+
+
+
+</apex:page>

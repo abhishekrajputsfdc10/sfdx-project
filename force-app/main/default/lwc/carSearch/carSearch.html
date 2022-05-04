@@ -1,0 +1,13 @@
+<template>
+    <div class="slds-m-bottom_small">
+    <lightning-card title="Car Search">
+       <c-car-search-component oncartypechange={handleevent}></c-car-search-component>
+    </lightning-card>
+</div>
+
+<div class="slds-m-vertical_small">
+   <lightning-card title="Car Result">
+       <c-show-cars carid={carid}></c-show-cars>
+   </lightning-card>
+</div>
+</template>

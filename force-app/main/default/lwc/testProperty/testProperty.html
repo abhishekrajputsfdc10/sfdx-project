@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title={cardTitle}>
+        
+        <lightning-button label="Change Private Property Value" onclick={changePrivatePropertyValue} ></lightning-button>
+    </lightning-card>
+<lightning-card>
+        <ul>
+            <template for:each={testingvar} for:item="test">
+                <li key={test.Name} style="padding: 10px">
+                    {test.Name} and {test.Age}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>

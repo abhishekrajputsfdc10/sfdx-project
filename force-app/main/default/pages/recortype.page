@@ -1,0 +1,21 @@
+<apex:page standardController="Job_Application__c" extensions="aaPage26E">
+    <apex:form id="theForm">
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!QuickSave}" rerender="theForm" />
+            </apex:pageBlockButtons>
+            <apex:messages />
+            <apex:pageBlockSection >
+                <apex:inputField value="{!Job_Application__c.Name}"/>
+                <apex:pageBlockSectionItem >
+                                    </apex:pageBlockSectionItem>                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Record Types" />
+                    <apex:selectList value="{!Job_Application__c.RecordTypeID}" >
+                        <apex:selectOptions value="{!RecordTypes}" />
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>  
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

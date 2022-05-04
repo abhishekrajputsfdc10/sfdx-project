@@ -1,0 +1,22 @@
+<apex:page controller="Active">
+ <apex:form >
+   <apex:pageblock >
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >             
+            <apex:outputLabel value="Enter the Leadsource"/>              
+            <apex:inputtext />       
+            
+         </apex:pageBlockSectionItem>   
+         </apex:pageBlockSection>               
+         </apex:pageblock>         
+         <apex:pageblock >
+  <apex:pageblockTable value="{!po}" var="a">
+     <apex:column value="{!a.name}"/>
+     <apex:column value="{!a.phone}"/>
+  
+  
+  </apex:pageblocktable>
+  </apex:pageblock>
+ </apex:form>
+
+</apex:page>

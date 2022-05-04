@@ -1,0 +1,6 @@
+<apex:page standardController="Account">
+<flow:interview name="Con_create">
+<apex:param name="Con_AccountID" value="{!Account.Id}"/>
+<apex:param name="Con_address" value="{!Account.Country__c}"/>
+</flow:interview>
+</apex:page>

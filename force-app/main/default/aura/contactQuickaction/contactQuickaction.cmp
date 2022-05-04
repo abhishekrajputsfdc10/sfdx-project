@@ -1,0 +1,3 @@
+<aura:component implements="force:lightningQuickaction,force:hasRecordId,force:hasSobjectName">
+    <c:contactQuickActionlwc recordId="{!v.recordId}" objectName="{!v.sObjectName}"/>
+</aura:component>

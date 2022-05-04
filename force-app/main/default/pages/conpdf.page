@@ -1,0 +1,8 @@
+<apex:page controller="contactquery" showHeader="false" renderAs="pdf">
+    <apex:pageBlock title="Export Results" >
+        <apex:pageBlockTable value="{!cs}" var="contact">
+            <apex:column value="{!contact.ID}"/>
+            <apex:column value="{!contact.Name}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

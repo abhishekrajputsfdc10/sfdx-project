@@ -1,0 +1,14 @@
+<aura:component implements="force:lightningQuickaction,force:hasRecordId,force:hasSobjectName">
+    <aura:html tag="style">
+        .slds-modal__container{
+            max-width: 80rem !important;
+            width:40% !important;
+            height: auto;
+        }
+        .modal-body{
+            height : 300px !important;
+            max-height: 400px !important;
+        }
+    </aura:html>   
+<c:createSubGrouplwc recordId="{!v.recordId}" objectName="{!v.sObjectName}" onclose="{!c.closeQA}"/>
+</aura:component>

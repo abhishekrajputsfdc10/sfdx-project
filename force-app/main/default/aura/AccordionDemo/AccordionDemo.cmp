@@ -1,0 +1,16 @@
+<aura:component controller = "Accord">
+    <aura:handler name = "init" value = "{!this}" action = "{!c.doInit}" />
+    <aura:attribute name = "conlist" type = "List"/>
+    	<div class="slds-m-around_x-large">
+            <lightning:accordion>
+                <aura:iteration items = "{!v.conlist}" var = "con">
+                    <lightning:accordionSection name="{!con.name}" label="{!con.Name}">
+                         <p><b>Email</b> : {!con.Email}</p>
+                    <!--aura:set attribute = "body">
+                       
+                    </aura:set-->
+                    </lightning:accordionSection>
+                </aura:iteration>
+            </lightning:accordion>
+        </div>
+</aura:component>

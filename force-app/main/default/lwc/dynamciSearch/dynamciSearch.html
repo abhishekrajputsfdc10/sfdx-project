@@ -1,0 +1,39 @@
+<template>
+    
+        <lightning-layout title="Seacr">
+            <lightning-layout-item padding="around-small" size="6">
+                <lightning-card>
+                <lightning-record-edit-form object-api-name="Account">
+                    <lightning-input-field field-name="AccountNumber" value={searchKey} onchange={searchHandler}> </lightning-input-field>
+                
+                    <div id="listbox-id-1" class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
+                        <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                            <template for:each={accounts.data} for:item="acc">
+                                <li key={acc.Id} onclick={onSelect} data-id={acc.id} role="presentation">
+                                    <span class="slds-lookup__item-action slds-lookup__item-action--label" role="option">
+                                       <span class="slds-truncate">{acc.Name}</span>
+                                    </span>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </lightning-record-edit-form>
+            </lightning-card>
+                <lightning-input label="Account Name" value={searchKey} onchange={searchHandler}></lightning-input>
+
+                <!--div id="listbox-id-1" class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
+                    <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                        <template for:each={accounts.data} for:item="acc">
+                            <li key={acc.Id} onclick={onSelect} data-id={acc.Id} role="presentation" data-name={acc.Name}>
+                                <span class="slds-lookup__item-action slds-lookup__item-action--label" role="option">
+                                   <span class="slds-truncate">{acc.Name}</span>
+                                </span>
+                            </li>
+                        </template>
+                    </ul>
+                </div-->
+
+            </lightning-layout-item>
+        </lightning-layout>        
+   
+</template>

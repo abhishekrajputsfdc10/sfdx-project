@@ -1,0 +1,12 @@
+<apex:page Controller="cc">
+<apex:form >
+  <apex:commandButton Value="Record" action="{!Click}" reRender="pbs"/>
+  <apex:pageBlock id="pbs">
+   <Apex:pageBlockTable value="{!lstact}" var="v">
+   <apex:column Value="{!v.Name}"/>
+   
+   </Apex:pageBlockTable>
+  </apex:pageBlock>
+
+</apex:form>
+</apex:page>

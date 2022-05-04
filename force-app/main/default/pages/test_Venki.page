@@ -1,0 +1,17 @@
+<apex:page StandardController="Case">
+     <apex:form >
+    <h1>Case Comment Create</h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <apex:commandButton value="Save comment"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <apex:commandButton value="Cancel"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <apex:outputText >Status: </apex:outputText>
+    <apex:inputfield value="{!case.status}"/>
+   </apex:form>
+   <table>
+    <tr>
+            <td colspan="2" scope="colgroup">table header</td>
+        </tr>
+        <tr>
+            <td colspan="4" scope="colgroup" align ="right">table footer</td>
+        </tr>
+   </table>
+</apex:page>

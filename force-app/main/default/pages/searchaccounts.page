@@ -1,0 +1,20 @@
+<apex:page controller="SearchAccountsController">
+  <apex:form >
+    <apex:pageBlock title="Search Accounts">
+      <apex:pageBlockSection >
+        <apex:inputField value="{!searchAcc.Name}" required="false"/>
+        <apex:inputField value="{!searchAcc.Website}"/>
+        <apex:pageBlockSectionItem >
+                   
+         </apex:pageBlockSectionItem>
+        <apex:commandButton value="Go" action="{!executeSearch}" />
+      </apex:pageBlockSection>
+            <apex:pageBlockTable value="{!results}" var="acc">
+        <apex:column value="{!acc.Name}"/>
+        <apex:column value="{!acc.Website}"/>
+        <apex:column value="{!acc.Industry}"/>
+     </apex:pageBlockTable>
+    </apex:pageBlock>
+    
+  </apex:form>
+</apex:page>

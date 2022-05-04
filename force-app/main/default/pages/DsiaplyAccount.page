@@ -1,0 +1,16 @@
+<apex:page controller="StandardAccountDisplayController">
+  <apex:form >
+    <apex:pageBlock title="Account List"> 
+        <apex:pageBlockTable value="{!records}" var="record"> 
+            <apex:column > 
+                <apex:facet name="header">Account Name</apex:facet> 
+                <apex:outputText value="{!record.Name}"/> 
+            </apex:column> 
+            <apex:column > 
+                <apex:facet name="header">Number</apex:facet> 
+                <apex:inputtext value="{!record.Numeric__c}"/> 
+            </apex:column> 
+        </apex:pageBlockTable> 
+    </apex:pageBlock> 
+    </apex:form>
+</apex:page>

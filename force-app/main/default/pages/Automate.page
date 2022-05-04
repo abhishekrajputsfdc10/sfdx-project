@@ -1,0 +1,9 @@
+<apex:page controller="Automate">
+ <apex:form >
+    <apex:pageBlock title="Automate Jobs">
+      <apex:pageBlockButtons >
+          <apex:commandButton Value="Automate Process" action="{!AutomateJobs}"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

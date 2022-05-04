@@ -1,0 +1,29 @@
+<apex:page controller="contactsearch" >
+
+<apex:form >
+
+<apex:outputLabel value="Search box" for="searchfield"/>
+
+<apex:inputtext id="searchfield" value="{!searchfield}" />
+
+<apex:commandButton action="{!SearchAction}" value="search" title="Search" reRender="pbss" />
+
+<apex:pageBlock >
+
+<apex:pageBlockSection id="pbss">
+
+        <apex:pageBlockTable value="{!con}" var="c"  id="pbt" >
+
+               <apex:column value="{!c.name}" headerValue="Name"/>
+
+               <apex:column value="{!c.LeadSource }" headerValue="Lead Source"/>     
+
+        </apex:pageBlockTable>
+
+        </apex:pageBlockSection>
+
+        </apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

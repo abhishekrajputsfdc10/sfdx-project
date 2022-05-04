@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Fetch Account">
+        <ul>
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <template for:each={accounts.data} for:item="acc">
+            <li key={acc.id}>
+         <div class="slds-p-around_medium lgc-bg">
+
+            <lightning-tile label={acc.Name} type="media">
+                <lightning-icon slot="media" icon-name="standard:account"></lightning-icon>
+                <p class="slds-truncate" title={acc.Phome}>{acc.Phome}</p>
+            </lightning-tile>
+       
+        </div>
+    </li>
+    </template>
+    </div>
+</ul>
+</lightning-card>
+</template>

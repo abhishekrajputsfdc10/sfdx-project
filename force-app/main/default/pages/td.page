@@ -1,0 +1,45 @@
+<apex:page >
+<table class="tableClass" id="thePage:theTable" border="0" cellpadding="0" cellspacing="0">
+
+    <colgroup span="2"></colgroup>
+    <caption>table caption</caption>
+    <thead>
+        <tr>
+            <td colspan="2" scope="colgroup">table header</td>
+        </tr>
+
+        <tr>
+            <td scope="col">Name</td>
+            <td scope="col">Owner</td>
+        </tr>
+    </thead>
+
+    <tfoot>
+        <tr>
+            <td scope="col">column footer</td>
+            <td scope="col">column footer</td>
+        </tr>
+        <tr>
+            <td colspan="2" scope="colgroup" align ="right">table footer</td>
+        </tr>
+    </tfoot>
+
+    <tbody>
+        <tr class="odd">
+            <td>Bass Manufacturing</td>
+            <td>Doug Chapman</td>
+        </tr>
+
+        <tr class="even">
+            <td>Ball Corp</td>
+            <td>Alan Ball</td>
+        </tr>
+
+        <tr class="odd">
+            <td>Wessler Co.</td>
+            <td>Jill Wessler</td>
+        </tr>
+    </tbody>
+
+</table>
+</apex:page>

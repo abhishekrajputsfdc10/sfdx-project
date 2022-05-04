@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <lightning-layout>
+            <lightning-layout-item>
+                <template if:true={showData}>
+                    <template for:each={accounts.data} for:item="acc">
+                            <lightning-tile key={acc.Id} label={acc.Name} type="media">
+                               <lightning-icon slot="media" icon-name="standard:account"></lightning-icon>
+                            </lightning-tile>
+                     </template>                     
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    
+</template>

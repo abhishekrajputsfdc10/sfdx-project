@@ -1,0 +1,23 @@
+<template>
+    
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                data={datatable}
+                columns={columns}
+                onrowselection={getSelectedName}>
+        </lightning-datatable>
+    </div>
+    <lightning-textarea name="input1" label="Enter some text" value={commasepratedfields}></lightning-textarea>
+    <lightning-button label="Retrieve records" onclick={retrieveRecords}></lightning-button>
+
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                data={displaydata}
+                columns={columnsrecords}
+                onrowselection={getSelectedName12}>
+        </lightning-datatable>
+    </div>
+
+</template>

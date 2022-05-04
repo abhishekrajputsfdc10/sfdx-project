@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <lightning-layout>
+            <lightning-layout-item>
+                <!--ightning-record-edit-form object-api-name="Account" onsuccess={successMethod} onsubmit={submitMethod} record-id={recordId}>
+                    <lightning-input-field field-name="Name"></lightning-input-field>
+                    <lightning-input-field field-name="Phone" value={phonevalue} onchange={phonechange}></lightning-input-field>
+                    <lightning-button label="Submit" type="submit"></lightning-button>                    
+                </lightning-record-edit-form-->
+                <lightning-input label="Account Name" value={accountvalue} onchange={accountnamehandler}></lightning-input>
+                <lightning-input label="Account Phone" value={phonevalue} onchange={accountphonehandler}></lightning-input>
+                <lightning-button label="Create Account" onclick={saveAccount}></lightning-button>                
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>    
+</template>

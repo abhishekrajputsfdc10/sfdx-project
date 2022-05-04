@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Account Manager">
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-card title="Create Account">
+                    <lightning-record-edit-form object-api-name="Account" onsubmit={checkValidation} onsuccess={handleClick}>
+                        <lightning-input-field field-name="Name"></lightning-input-field>
+                        <lightning-input-field field-name="Phone"></lightning-input-field>
+                        <lightning-input-field field-name="Website"></lightning-input-field>
+                        <lightning-button
+                            class="slds-m-top_small"
+                            type="submit"
+                            label="Create new Account">
+                        </lightning-button>
+                    </lightning-record-edit-form>
+                </lightning-card>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-card title = "View Record">
+                    <lightning-record-view-form object-api-name="Account" record-id={recordID}>
+                        <div class="slds-box">
+                            <lightning-output-field field-name="Name"></lightning-output-field>
+                            <lightning-output-field field-name="Phone"></lightning-output-field>
+                            <lightning-output-field field-name="Website"></lightning-output-field>
+                        </div>
+                    </lightning-record-view-form>
+                </lightning-card>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>    
+</template>

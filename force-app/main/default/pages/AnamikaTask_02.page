@@ -1,0 +1,52 @@
+<apex:page controller="anamikatask_02" id="pg">
+
+<Script>
+
+  function Validate() {
+   
+  if(document.getElementById('{!$Component.frm.pb.pbs.pbsi3.nam1}').value== '')
+  {
+  
+  alert("last Name is mandotry");
+  }
+  if(document.getElementById('{!$Component.frm.pb.pbs.pbsi2.phone}').value== '')
+  {
+  
+  alert("Phone Number is mandotry");
+  }
+  
+  else {
+  callsubmt();
+  
+  alert("Contact has been created");
+  
+  
+  }
+  
+  }
+  </Script>
+
+
+<apex:form id="frm">
+  <apex:actionFunction action="{!submt}" name="callsubmt" reRender="pb"/>
+     <apex:pageBlock id="pb">
+       <apex:pageBlockSection id="pbs">
+        <apex:pageBlockSectionItem > <apex:outputLabel value="First Name"/>  </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem id="pbsi1"> <apex:inputtext value="{!nam}" id="nam"/>  </apex:pageBlockSectionItem>
+         <apex:pageBlockSectionItem > <apex:outputLabel value="Last Name"/>  </apex:pageBlockSectionItem>
+         <apex:pageBlockSectionItem id="pbsi3"> <apex:inputtext value="{!nam1}" id="nam1"/>  </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem > <apex:outputLabel value="Phone Number"/>  </apex:pageBlockSectionItem>
+         <apex:pageBlockSectionItem id="pbsi2"> <apex:inputtext value="{!phone1}" id="phone"/>  </apex:pageBlockSectionItem>      
+        
+      
+       </apex:pageBlockSection>
+       
+       <apex:pageBlockButtons >
+         <apex:commandButton value="Insert" onclick="Validate()" />
+       
+       </apex:pageBlockButtons>
+     </apex:pageBlock>
+ 
+ </apex:form>
+
+</apex:page>
