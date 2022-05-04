@@ -1,3 +1,6 @@
+/*
+I am commenting
+*/
 global class AccountUpdate Implements Database.Batchable <sObject> {
     global Database.queryLocator start(Database.BatchableContext bc) {
         String SOQL = 'SELECT Id, Description FROM Account';
