@@ -3,7 +3,7 @@
  * recipe.
  * Updates a selected opportunity to closed won based on a parameter
  * passed to the action method.
- *******************************************************************/
+ **********************************************************************/
 public with sharing class ActionParameterController 
 {
     // the id of the opportunity to close - this is sent from the page
